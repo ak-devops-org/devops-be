@@ -1,0 +1,6 @@
+version: '2.4'
+services:
+  my_app:
+    image: "akatkova/be-devops:latest"
+    ports:
+      - "3000:30"
