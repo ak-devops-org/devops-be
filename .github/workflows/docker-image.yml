@@ -26,14 +26,14 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
-      # - run: npm ci
-      # - run: npm test
+      - run: npm ci
+      - run: npm test
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         # run: npx semantic-release
-        run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
-        run: semantic-release
+        # run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
+        # run: semantic-release
 
   build:
 
