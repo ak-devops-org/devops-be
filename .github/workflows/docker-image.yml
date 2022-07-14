@@ -31,9 +31,7 @@ jobs:
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        # run: npx semantic-release
-        # run: npm install -g semantic-release @semantic-release/exec semantic-release-plus @semantic-release-plus/docker
-        # run: semantic-release
+        run: npx semantic-release
 
   build:
 
