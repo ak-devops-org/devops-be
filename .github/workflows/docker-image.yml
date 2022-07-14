@@ -5,7 +5,7 @@ name: Docker
 on:
   
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' , 'latest']
 
@@ -32,7 +32,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-        
+
   build:
 
     runs-on: ubuntu-latest
